@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin xmlns:android="http://schemas.android.com/apk/res/android" id="com.cleveso.plugins.ACRMusicDetector"
+    version="0.0.1"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>ACRMusicDetector</name>
+    <js-module name="ACRMusicDetector" src="www/ACRMusicDetector.js">
+        <clobbers target="cordova.plugins.ACRMusicDetector" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="ACRMusicDetector">
+                <param name="android-package"
+                    value="com.cleveso.plugins.ACRMusicDetector.ACRMusicDetector" />
+            </feature>
+        </config-file>
+        
+        <framework src="src/android/extras.gradle" custom="true" type="gradleReference" />
+        
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/libs/ACR.jar" target-dir="libs" />
+        <source-file src="src/android/ACRMusicDetector.java"
+            target-dir="src/com/cleveso/plugins/ACRMusicDetector/ACRMusicDetector" />
+    </platform>
+</plugin>

@@ -1,0 +1,25 @@
+{
+  "name": "ACRMusicDetecor",
+  "version": "0.0.1",
+  "description": "ACR Music Detector for Cordova",
+  "cordova": {
+    "id": "com.cleveso.plugins.ACRMusicDetector",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Clevesol/ACRMusicDetecor.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Selvadurai Handeeban <s.handeeban@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Clevesol/ACRMusicDetecor/issues"
+  },
+  "homepage": "https://github.com/Clevesol/ACRMusicDetecor#readme"
+}
