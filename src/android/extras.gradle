@@ -1,3 +1,20 @@
+android {
+   sourceSets {
+      main {
+         jni {
+            srcDirs = []
+         }
+
+         jniLibs {
+            srcDir 'jniLibs'
+         }
+      }
+   }
+}
+
 dependencies {
    provided files('libs/ACR.jar')
 }
+
+
+

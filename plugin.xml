@@ -15,6 +15,18 @@
         </config-file>
         
         <framework src="src/android/extras.gradle" custom="true" type="gradleReference" />
+
+
+        <!-- PRODUCTION - comment out source files below for debugging -->
+        <!-- Compiled C libraries -->
+        <source-file src="src/android/jniLibs/arm64-v8a/libACRCloudEngine.so" target-dir="jniLibs/arm64-v8a/" />
+        <source-file src="src/android/jniLibs/armeabi/libACRCloudEngine.so" target-dir="jniLibs/armeabi/" />
+        <source-file src="src/android/jniLibs/armeabi-v7a/libACRCloudEngine.so" target-dir="jniLibs/armeabi-v7a/" />
+        <source-file src="src/android/jniLibs/mips/libACRCloudEngine.so" target-dir="jniLibs/mips/" />
+        <source-file src="src/android/jniLibs/mips64/libACRCloudEngine.so" target-dir="jniLibs/mips64/" />
+        <source-file src="src/android/jniLibs/x86/libACRCloudEngine.so" target-dir="jniLibs/x86/" />
+        <source-file src="src/android/jniLibs/x86_64/libACRCloudEngine.so" target-dir="jniLibs/x86_64/" />
+        <!-- END PRODUCTION -->
         
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <source-file src="src/android/libs/ACR.jar" target-dir="libs" />
