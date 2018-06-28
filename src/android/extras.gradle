@@ -13,8 +13,11 @@ android {
 }
 
 dependencies {
-   provided files('libs/ACR.jar')
+   provided files('app/src/mainlibs/ACR.jar')
 }
+
+
+
 
 
 
