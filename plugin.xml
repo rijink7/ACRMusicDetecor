@@ -28,7 +28,7 @@
         <source-file src="src/android/jniLibs/x86_64/libACRCloudEngine.so" target-dir="jniLibs/x86_64/" />
         <!-- END PRODUCTION -->
         
-        <config-file parent="application" target="AndroidManifest.xml"></config-file>
+        <config-file parent="/*" target="app/src/main/AndroidManifest.xml"></config-file>
         <source-file src="src/android/libs/ACR.jar" target-dir="libs" />
         <source-file src="src/android/ACRMusicDetector.java"
             target-dir="src/com/cleveso/plugins/ACRMusicDetector/ACRMusicDetector" />
