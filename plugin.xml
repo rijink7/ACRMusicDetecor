@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin xmlns:android="http://schemas.android.com/apk/res/android" id="com.cleveso.plugins.ACRMusicDetector"
+<plugin xmlns:android="http://schemas.android.com/apk/res/android" id="com.nxt8.plugins.ACRMusicDetector"
     version="0.0.1"
     xmlns="http://apache.org/cordova/ns/plugins/1.0">
     <name>ACRMusicDetector</name>
@@ -10,7 +10,7 @@
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="ACRMusicDetector">
                 <param name="android-package"
-                    value="com.cleveso.plugins.ACRMusicDetector.ACRMusicDetector" />
+                    value="com.nxt8.plugins.ACRMusicDetector.ACRMusicDetector" />
             </feature>
         </config-file>
         
@@ -19,17 +19,17 @@
 
         <!-- PRODUCTION - comment out source files below for debugging -->
         <!-- Compiled C libraries-->
-        <source-file src="src/android/jniLibs/arm64-v8a/libACRCloudEngine.so" target-dir="app/src/jniLibs/arm64-v8a/" />
-        <source-file src="src/android/jniLibs/armeabi/libACRCloudEngine.so" target-dir="app/src/jniLibs/armeabi/" />
-        <source-file src="src/android/jniLibs/armeabi-v7a/libACRCloudEngine.so" target-dir="app/src/jniLibs/armeabi-v7a/" />
-        <source-file src="src/android/jniLibs/mips/libACRCloudEngine.so" target-dir="app/src/jniLibs/mips/" />
-        <source-file src="src/android/jniLibs/mips64/libACRCloudEngine.so" target-dir="app/src/jniLibs/mips64/" />
-        <source-file src="src/android/jniLibs/x86/libACRCloudEngine.so" target-dir="app/src/jniLibs/x86/" />
-        <source-file src="src/android/jniLibs/x86_64/libACRCloudEngine.so" target-dir="app/src/jniLibs/x86_64/" />
-          <END PRODUCTION -->
+        <source-file src="src/android/jniLibs/arm64-v8a/libACRCloudEngine.so" target-dir="app/libs/jniLibs/arm64-v8a/" />
+        <source-file src="src/android/jniLibs/armeabi/libACRCloudEngine.so" target-dir="app/libs/jniLibs/armeabi/" />
+        <source-file src="src/android/jniLibs/armeabi-v7a/libACRCloudEngine.so" target-dir="app/libs/jniLibs/armeabi-v7a/" />
+        <source-file src="src/android/jniLibs/mips/libACRCloudEngine.so" target-dir="app/libs/jniLibs/mips/" />
+        <source-file src="src/android/jniLibs/mips64/libACRCloudEngine.so" target-dir="app/libs/jniLibs/mips64/" />
+        <source-file src="src/android/jniLibs/x86/libACRCloudEngine.so" target-dir="app/libs/jniLibs/x86/" />
+        <source-file src="src/android/jniLibs/x86_64/libACRCloudEngine.so" target-dir="app/libs/jniLibs/x86_64/" />
+        <!--<END PRODUCTION -->
         
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
-        <source-file src="src/android/libs/ACR.jar" target-dir="app/src/main/libs" />
-        <source-file src="src/android/ACRMusicDetector.java" target-dir="src/com/cleveso/plugins/ACRMusicDetector/ACRMusicDetector" />
+        <source-file src="src/android/libs/ACR.jar" target-dir="app/libs" />
+        <source-file src="src/android/ACRMusicDetector.java" target-dir="src/com/nxt8/plugins/ACRMusicDetector/ACRMusicDetector" />
     </platform>
 </plugin>

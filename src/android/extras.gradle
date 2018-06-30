@@ -6,18 +6,15 @@ android {
          }
 
          jniLibs {
-            srcDir 'jniLibs'
+            srcDir 'app/libs/jniLibs'
          }
       }
    }
 }
 
 dependencies {
-   provided files('app/src/mainlibs/ACR.jar')
+   provided files('libs/ACR.jar')
 }
-
-
-
 
 
 
