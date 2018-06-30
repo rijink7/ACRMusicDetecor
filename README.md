@@ -4,4 +4,4 @@ usage example:
 
 ionic
 
-ionic cordova plugin add https://github.com/rijink7/ACRMusicDetecor.git
+ionic cordova plugin add https://github.com/rijink7/ACRMusicDetecor.git 

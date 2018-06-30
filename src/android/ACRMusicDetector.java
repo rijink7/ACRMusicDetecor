@@ -1,4 +1,4 @@
-package com.cleveso.plugins.ACRMusicDetector;
+package com.nxt8.plugins.ACRMusicDetector;
 
 
 import android.util.Log;
@@ -187,67 +187,8 @@ public class ACRMusicDetector extends CordovaPlugin implements IACRCloudListener
             this.mClient.cancel();
             mProcessing = false;
         }
-
-        String tres = "\n";
-
-        try {
-            JSONObject j = new JSONObject(result);
-            JSONObject j1 = j.getJSONObject("status");
-            int j2 = j1.getInt("code");
-            if(j2 == 0){
-                JSONObject metadata = j.getJSONObject("metadata");
-                //
-                if (metadata.has("humming")) {
-                    JSONArray hummings = metadata.getJSONArray("humming");
-                    for(int i=0; i<hummings.length(); i++) {
-                        JSONObject tt = (JSONObject) hummings.get(i);
-                        String title = tt.getString("title");
-                        JSONArray artistt = tt.getJSONArray("artists");
-                        JSONObject art = (JSONObject) artistt.get(0);
-                        String artist = art.getString("name");
-                        tres = tres + (i+1) + ".  " + title + "\n";
-                    }
-                }
-                if (metadata.has("music")) {
-                    JSONArray musics = metadata.getJSONArray("music");
-                    for(int i=0; i<musics.length(); i++) {
-                        JSONObject tt = (JSONObject) musics.get(i);
-                        String title = tt.getString("title");
-                        JSONArray artistt = tt.getJSONArray("artists");
-                        JSONObject art = (JSONObject) artistt.get(0);
-                        String artist = art.getString("name");
-                        tres = tres + (i+1) + ".  Title: " + title + "    Artist: " + artist + "\n";
-                    }
-                }
-                if (metadata.has("streams")) {
-                    JSONArray musics = metadata.getJSONArray("streams");
-                    for(int i=0; i<musics.length(); i++) {
-                        JSONObject tt = (JSONObject) musics.get(i);
-                        String title = tt.getString("title");
-                        String channelId = tt.getString("channel_id");
-                        tres = tres + (i+1) + ".  Title: " + title + "    Channel Id: " + channelId + "\n";
-                    }
-                }
-                if (metadata.has("custom_files")) {
-                    JSONArray musics = metadata.getJSONArray("custom_files");
-                    for(int i=0; i<musics.length(); i++) {
-                        JSONObject tt = (JSONObject) musics.get(i);
-                        String title = tt.getString("title");
-                        tres = tres + (i+1) + ".  Title: " + title + "\n";
-                    }
-                }
-                tres = tres + "\n\n" + result;
-            }else{
-                tres = result;
-            }
-
-
-            this.sendMessage(tres);
-        } catch (JSONException e) {
-            tres = result;
-            e.printStackTrace();
-        }
-
+        
+        this.sendMessage(result);
     }
 
     @Override

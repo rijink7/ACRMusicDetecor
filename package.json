@@ -11,31 +11,61 @@
         "type": "directory"
       },
       "/home/insight3/Desktop/DeeprIo3/android"
+    ],
+    [
+      {
+        "raw": "https://github.com/rijink7/ACRMusicDetecor.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/rijink7/ACRMusicDetecor.git",
+        "spec": "git+https://github.com/rijink7/ACRMusicDetecor.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:rijink7/ACRMusicDetecor.git",
+          "sshUrl": "git+ssh://git@github.com/rijink7/ACRMusicDetecor.git",
+          "httpsUrl": "git+https://github.com/rijink7/ACRMusicDetecor.git",
+          "gitUrl": "git://github.com/rijink7/ACRMusicDetecor.git",
+          "shortcut": "github:rijink7/ACRMusicDetecor",
+          "directUrl": "https://raw.githubusercontent.com/rijink7/ACRMusicDetecor/master/package.json"
+        }
+      },
+      "/home/insight3/Desktop/rijin/android/android"
     ]
   ],
-  "_from": "../../ACRMusicDetecor-master",
+  "_from": "git+https://github.com/rijink7/ACRMusicDetecor.git",
   "_id": "ACRMusicDetecor@0.0.1",
   "_inCache": true,
   "_location": "/ACRMusicDetecor",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/home/insight3/Desktop/ACRMusicDetecor-master",
+    "raw": "https://github.com/rijink7/ACRMusicDetecor.git",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/home/insight3/Desktop/ACRMusicDetecor-master",
-    "spec": "/home/insight3/Desktop/ACRMusicDetecor-master",
-    "type": "directory"
+    "rawSpec": "https://github.com/rijink7/ACRMusicDetecor.git",
+    "spec": "git+https://github.com/rijink7/ACRMusicDetecor.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:rijink7/ACRMusicDetecor.git",
+      "sshUrl": "git+ssh://git@github.com/rijink7/ACRMusicDetecor.git",
+      "httpsUrl": "git+https://github.com/rijink7/ACRMusicDetecor.git",
+      "gitUrl": "git://github.com/rijink7/ACRMusicDetecor.git",
+      "shortcut": "github:rijink7/ACRMusicDetecor",
+      "directUrl": "https://raw.githubusercontent.com/rijink7/ACRMusicDetecor/master/package.json"
+    }
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "file:../../ACRMusicDetecor-master",
-  "_shasum": "76057e5e66b885db03979fec28163e9f51d14c5f",
+  "_resolved": "git+https://github.com/rijink7/ACRMusicDetecor.git#455bab87c047d3800afda74f77e07da23e81068f",
+  "_shasum": "4cf0c62e9d9332e79f4e8f4e4e6a364d4a11594d",
   "_shrinkwrap": null,
-  "_spec": "/home/insight3/Desktop/ACRMusicDetecor-master",
-  "_where": "/home/insight3/Desktop/DeeprIo3/android",
+  "_spec": "https://github.com/rijink7/ACRMusicDetecor.git",
+  "_where": "/home/insight3/Desktop/rijin/android/android",
   "author": {
     "name": "Selvadurai Handeeban",
     "email": "s.handeeban@gmail.com"
@@ -52,6 +82,7 @@
   "dependencies": {},
   "description": "ACR Music Detector for Cordova",
   "devDependencies": {},
+  "gitHead": "455bab87c047d3800afda74f77e07da23e81068f",
   "homepage": "https://github.com/Clevesol/ACRMusicDetecor#readme",
   "keywords": [
     "ecosystem:cordova",
