@@ -36,36 +36,27 @@
   ],
   "_from": "git+https://github.com/rijink7/ACRMusicDetecor.git",
   "_id": "ACRMusicDetecor@0.0.1",
+  "_inBundle": false,
   "_inCache": true,
   "_location": "/ACRMusicDetecor",
   "_phantomChildren": {},
   "_requested": {
+    "type": "git",
     "raw": "https://github.com/rijink7/ACRMusicDetecor.git",
-    "scope": null,
-    "escapedName": null,
-    "name": null,
     "rawSpec": "https://github.com/rijink7/ACRMusicDetecor.git",
-    "spec": "git+https://github.com/rijink7/ACRMusicDetecor.git",
-    "type": "hosted",
-    "hosted": {
-      "type": "github",
-      "ssh": "git@github.com:rijink7/ACRMusicDetecor.git",
-      "sshUrl": "git+ssh://git@github.com/rijink7/ACRMusicDetecor.git",
-      "httpsUrl": "git+https://github.com/rijink7/ACRMusicDetecor.git",
-      "gitUrl": "git://github.com/rijink7/ACRMusicDetecor.git",
-      "shortcut": "github:rijink7/ACRMusicDetecor",
-      "directUrl": "https://raw.githubusercontent.com/rijink7/ACRMusicDetecor/master/package.json"
-    }
+    "saveSpec": "git+https://github.com/rijink7/ACRMusicDetecor.git",
+    "fetchSpec": "https://github.com/rijink7/ACRMusicDetecor.git",
+    "gitCommittish": null
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "git+https://github.com/rijink7/ACRMusicDetecor.git#455bab87c047d3800afda74f77e07da23e81068f",
+  "_resolved": "git+https://github.com/rijink7/ACRMusicDetecor.git#39af191f9a3ca6b7626994a7143ab4b1c61bf917",
   "_shasum": "4cf0c62e9d9332e79f4e8f4e4e6a364d4a11594d",
   "_shrinkwrap": null,
   "_spec": "https://github.com/rijink7/ACRMusicDetecor.git",
-  "_where": "/home/insight3/Desktop/rijin/android/android",
+  "_where": "/Users/afscdev/Desktop/Deepr_ios",
   "author": {
     "name": "Selvadurai Handeeban",
     "email": "s.handeeban@gmail.com"
@@ -73,6 +64,7 @@
   "bugs": {
     "url": "https://github.com/Clevesol/ACRMusicDetecor/issues"
   },
+  "bundleDependencies": false,
   "cordova": {
     "id": "com.cleveso.plugins.ACRMusicDetector",
     "platforms": [
@@ -80,6 +72,7 @@
     ]
   },
   "dependencies": {},
+  "deprecated": false,
   "description": "ACR Music Detector for Cordova",
   "devDependencies": {},
   "gitHead": "455bab87c047d3800afda74f77e07da23e81068f",
@@ -91,8 +84,6 @@
   "license": "ISC",
   "name": "ACRMusicDetecor",
   "optionalDependencies": {},
-  "readme": "Cordova Plugin for ACR Cloud Music Recognition \n\nusage example:\n\nionic\n\nionic cordova plugin add https://github.com/Clevesol/ACRMusicDetecor.git\n",
-  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Clevesol/ACRMusicDetecor.git"

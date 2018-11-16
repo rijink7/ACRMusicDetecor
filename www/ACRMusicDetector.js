@@ -1,7 +1,7 @@
 var exec = require('cordova/exec');
 
-exports.coolMethod = function(arg0, success, error) {
-    exec(success, error, "ACRMusicDetector", "coolMethod", [arg0]);
+exports.coolMethod = function(name, success, error) {
+    exec(success, error, "ACRMusicDetector", "coolMethod", [name]);
 };
 
 exports.init = function(arg0, success, error) {

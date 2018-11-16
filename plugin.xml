@@ -32,4 +32,22 @@
         <source-file src="src/android/libs/ACR.jar" target-dir="app/libs" />
         <source-file src="src/android/ACRMusicDetector.java" target-dir="src/com/nxt8/plugins/ACRMusicDetector/ACRMusicDetector" />
     </platform>
+    <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="ACRMusicDetector">
+        <param name="ios-package" value="ACRMusicDetector" />
+      </feature>
+    </config-file>
+     <config-file overwrite="true" parent="NSMicrophoneUsageDescription" platform="ios" target="*-Info.plist"> <string>App would like to access the mic for track detection.</string> </config-file>
+    <header-file src="src/ios/ACRMusicDetector.h" />
+    <source-file src="src/ios/ACRMusicDetector.m" />
+    <header-file src="src/ios/ACRCloudConfig.h" />
+            <header-file src="src/ios/ACRCloudRecognition.h" />
+               <source-file src="src/ios/libACRCloud_IOS_SDK.a" framework="true" />
+               <framework src="AVFoundation.framework" />
+               <framework src="AudioToolbox.framework" />
+               <framework src="AudioToolbox.framework" />
+               <framework src="libc++.tbd" />
+               <framework src="Security.framework" />
+  </platform>
 </plugin>
