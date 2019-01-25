@@ -33,6 +33,11 @@
 - (void) init:(CDVInvokedUrlCommand*)command;
 - (void) start:(CDVInvokedUrlCommand*)command;
 - (void) stop:(CDVInvokedUrlCommand*)command;
+- (void) startPreRec:(CDVInvokedUrlCommand*)command;
+- (void) stopPreRec:(CDVInvokedUrlCommand*)command;
+- (void) cancel:(CDVInvokedUrlCommand*)command;
+
+
 
 
 @end

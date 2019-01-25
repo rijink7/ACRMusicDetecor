@@ -16,6 +16,12 @@ typedef enum {
 }ACRCloudRecMode;
 
 typedef enum {
+    rec_data_audio = 0,     //rec audio data
+    rec_data_humming = 1,   //rec humming data
+    rec_data_both = 2       //rec both
+}ACRCloudRecData;
+
+typedef enum {
     result_type_error = -1,
     result_type_none = 0,
     result_type_audio = 1,
@@ -51,8 +57,10 @@ typedef void(^ACRCloudVolumeBlock)(float volume);
     NSString *_protocal;
     NSDictionary *_params;
     ACRCloudRecMode _recMode;
+    ACRCloudRecData _recDataType;
     NSInteger _requestTimeout;
     NSInteger _prerecorderTime;
+    NSInteger      _keepPlaying;
     ACRCloudResultBlock _resultBlock;
     ACRCloudStateBlock _stateBlock;
     ACRCloudVolumeBlock _volumeBlock;
@@ -68,9 +76,10 @@ typedef void(^ACRCloudVolumeBlock)(float volume);
 @property(nonatomic, retain) NSString *protocol;
 @property(nonatomic, retain) NSDictionary *params;
 @property(nonatomic, assign) ACRCloudRecMode recMode;
+@property(nonatomic, assign) ACRCloudRecData recDataType;
 @property(nonatomic, assign) NSInteger requestTimeout;
 @property(nonatomic, assign) NSInteger prerecorderTime;
-@property(nonatomic, assign) bool keepPlaying;
+@property(nonatomic, assign) NSInteger keepPlaying;
 @property(nonatomic, copy) ACRCloudResultBlock resultBlock;
 @property(nonatomic, copy) ACRCloudStateBlock stateBlock;
 @property(nonatomic, copy) ACRCloudVolumeBlock volumeBlock;

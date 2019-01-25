@@ -32,9 +32,12 @@
         resultBlock:(ACRCloudResultBlock)resultBlock;
 
 -(NSString*)recognize_fp:(NSData*)fingerprint;
+-(NSString*)recognize_hum_fp:(NSData*)fingerprint;
 
+//only support RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, mono 8000 Hz
 +(NSData*)get_fingerprint:(char*)pcm len:(int)len;
 +(NSData*)get_fingerprint:(NSData*)pcm;
++(NSData*)get_hum_fingerprint:(NSData*)pcm;
 
 +(NSData*) get_fingerprint:(char*)pcm
                      len:(unsigned)len

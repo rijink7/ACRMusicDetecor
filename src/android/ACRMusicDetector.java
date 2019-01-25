@@ -112,7 +112,7 @@ public class ACRMusicDetector extends CordovaPlugin implements IACRCloudListener
             // the function initWithConfig is used to load offline db, and it may cost long time.
             this.initState = this.mClient.initWithConfig(this.mConfig);
             if (this.initState) {
-             //   this.mClient.startPreRecord(3000); //start prerecord, you can call "this.mClient.stopPreRecord()" to stop prerecord.
+               this.mClient.startPreRecord(3000); //start prerecord, you can call "this.mClient.stopPreRecord()" to stop prerecord.
             }
 
 
@@ -227,6 +227,25 @@ public class ACRMusicDetector extends CordovaPlugin implements IACRCloudListener
             this.mClient.cancel();
         }
     }
+   public void startPreRec() {
+        if (!this.initState) {
+            return;
+        }
+
+        if (!mProcessing) {
+            if (this.initState) {
+               this.mClient.startPreRecord(3000); //start prerecord, you can call "this.mClient.stopPreRecord()" to stop prerecord.
+            }
+        }
+    }
+
+protected void stopPreRec() {
+        if (mProcessing && this.mClient != null) {
+            mProcessing = false;
+            this.mClient.stopPreRecord();
+        }
+    }
+
 
 
 

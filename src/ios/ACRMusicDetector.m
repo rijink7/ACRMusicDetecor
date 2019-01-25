@@ -36,20 +36,21 @@
     _config.accessKey = @"878427a85c26a8e44b91f8eddb77de91";
     _config.accessSecret = @"vL3K5M2SvUUr0Bz3ZpMJsK8NJKLb9MECop6mmven";
     _config.host = @"identify-us-west-2.acrcloud.com";
-    _config.protocol = @"http";
+    _config.protocol = @"https";
     
     //if you want to identify your offline db, set the recMode to "rec_mode_local"
     _config.recMode = rec_mode_remote;
     _config.audioType = @"recording";
     _config.requestTimeout = 10;
+    _config.keepPlaying = 1;
     
     /* used for local model */
     if (_config.recMode == rec_mode_local || _config.recMode == rec_mode_both)
         _config.homedir = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"acrcloud_local_db"];
     
-    
+    __weak id weakSelf = self;
     _config.resultBlock = ^(NSString *result, ACRCloudResultType resType) {
-        [self handleResult:result resultType:resType];
+        [weakSelf handleResult:result resultType:resType];
     };
     
     //if you want to get the result and fingerprint, uncoment this code, comment the code "resultBlock".
@@ -60,7 +61,7 @@
     _client = [[ACRCloudRecognition alloc] initWithConfig:_config];
     
     //start pre-record
-    [_client startPreRecord:3000];
+     [_client startPreRecord:4000];
     
     NSString* msg = [NSString stringWithFormat: @"init successfull"];
     
@@ -85,12 +86,35 @@
     startTime = [[NSDate date] timeIntervalSince1970];
 }
 
+- (void)startPreRec:(CDVInvokedUrlCommand*)command
+{
+    [_client startPreRecord:4000];
+}
+
+
+
 - (void)stop:(CDVInvokedUrlCommand*)command
 {
     if(_client) {
         [_client stopRecordRec];
     }
     _start = NO;
+}
+
+- (void)cancel:(CDVInvokedUrlCommand*)command
+{
+    if(_client) {
+        [_client stopRecordAndRec];
+    }
+    _start = NO;
+}
+
+
+- (void)stopPreRec:(CDVInvokedUrlCommand*)command
+{
+    if(_client) {
+        [_client stopPreRecord];
+    }
 }
 
 -(void)handleResult:(NSString *)result
